@@ -1,11 +1,11 @@
 const express = require('express');
-const PORT = process.env.PORT || 4040
+const PORT = process.env.PORT || 443
 
 const app = express();
 app.use(express.json())
 app.post('*', async (req, res) => {
     res.send('Hello post')
-    console.log('req', req.body)
+    console.debug('req', req.body)
 });
 
 app.get('*', async (req, res) => {
